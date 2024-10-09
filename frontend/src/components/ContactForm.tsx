@@ -1,3 +1,4 @@
+import { Box, Button } from "@mui/material";
 import { useState } from "react";
 
 export const ContactForm = () => {
@@ -18,49 +19,84 @@ export const ContactForm = () => {
         email,
       }),
     };
-    const url = "http://127.0.0.1:5000/contacts"
+    const url = "http://127.0.0.1:5000/contacts";
     const response = await fetch(url, options);
     const data = await response.json();
     console.log(data);
-    if (data.status != 201 && response.status != 200) {     
+    if (data.status != 201 && response.status != 200) {
       alert(data.message);
     } else {
-        alert("Contact added successfully");
-        setFirstName("");
-        setLastName("");
-        setEmail("");
+      alert("Contact added successfully");
+      setFirstName("");
+      setLastName("");
+      setEmail("");
     }
   };
 
   return (
-    <div>
+    <Box>
       <form onSubmit={addUser}>
-        <label htmlFor="first_name">First Name</label>
-        <input
-          type="text"
-          id="first_name"
-          name="first_name"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-        />
-        <label htmlFor="last_name">Last Name</label>
-        <input
-          type="text"
-          id="last_name"
-          name="last_name"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button type="submit">Add Contact</button>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "start",
+            gap: 3,
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "start",
+            }}
+          >
+            <label htmlFor="first_name">First Name</label>
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "start",
+            }}
+          >
+            <label htmlFor="last_name">Last Name</label>
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "start",
+            }}
+          >
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </Box>
+          <Button variant="contained" type="submit">
+            Add Contact
+          </Button>
+        </Box>
       </form>
-    </div>
+    </Box>
   );
 };
