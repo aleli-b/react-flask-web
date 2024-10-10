@@ -13,7 +13,7 @@ export const Home = () => {
         </Box>
       </Box>
       <Box className="about" id="about">
-        <p>asas</p>
+        <p>About</p>
       </Box>
     </Box>
   );
