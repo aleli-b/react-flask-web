@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import { ContactList } from "./components/ContactList";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+// import { ContactList } from "./components/ContactList";
 import { ContactForm } from "./components/ContactForm";
+import { Home } from "./pages/Home";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -9,7 +11,7 @@ function App() {
   useEffect(() => {
     fetchContacts();
   }, []);
-  
+
   const fetchContacts = async () => {
     const response = await fetch("http://127.0.0.1:5000/contacts");
     const data = await response.json();
@@ -17,10 +19,13 @@ function App() {
   };
 
   return (
-    <div>
-      <ContactList contacts={contacts} />
-      <ContactForm />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* <Route path="/" element={<ContactList contacts={contacts} />} /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/sr" element={<ContactForm />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
