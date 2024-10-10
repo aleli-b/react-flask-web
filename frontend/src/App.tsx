@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 // import { ContactList } from "./components/ContactList";
 import { ContactForm } from "./components/ContactForm";
 import { Home } from "./pages/Home";
+import Navbar from "./layout/Navbar";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         {/* <Route path="/" element={<ContactList contacts={contacts} />} /> */}
         <Route path="/" element={<Home />} />

@@ -20,14 +20,16 @@
 
 .text-wrapper {
   background-color: gray;
-  color: black;
   text-align: center;
   margin-bottom: 2rem;
+  color: white;
+  font-size: 2rem;
+  line-height: 2.25rem;
 }
 
 .title-wrapper {
   position: absolute;
-  background-color: gray;
+  color: #ffb200;
   left: 0;
   bottom: 0;
 }
@@ -37,16 +39,11 @@
   height: 62.489px;
 }
 
-.yweb {
+.myweb {
   font-weight: 100;
   line-height: 100%;
   text-transform: uppercase;
   font-size: 89px;
-}
-
-.text-wrapper {
-  font-size: 2rem;
-  line-height: 2.25rem;
 }
 
 .about {
@@ -54,7 +51,7 @@
 }
 
 @media (min-width: 1160px) {
-  .yweb {
+  .myweb {
     font-size: 230px;
     letter-spacing: 3.39px;
   }
@@ -71,7 +68,7 @@
     line-height: 3rem;
   }
 
-  .yweb {
+  .myweb {
     font-size: 215px;
   }
 

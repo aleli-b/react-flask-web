@@ -17,7 +17,7 @@ export const Text = () => {
             transform: "translate3d(0px, 0px, 0px)",
           }}
         >
-          S'unir pour bâtir{" "}
+          madvillainy: one of{" "}
         </div>
       </div>
       <div
@@ -36,7 +36,7 @@ export const Text = () => {
             transform: "translate3d(0px, 0px, 0px)",
           }}
         >
-          l'avenir : plus qu'un{" "}
+          the all-time best{" "}
         </div>
       </div>
       <div
@@ -55,7 +55,7 @@ export const Text = () => {
             transform: "translate3d(0px, 0px, 0px)",
           }}
         >
-          engagement, une{" "}
+          albums, by geniuses{" "}
         </div>
       </div>
       <div
@@ -74,7 +74,7 @@ export const Text = () => {
             transform: "translate3d(0px, 0px, 0px)",
           }}
         >
-          mission collective.{" "}
+          Madlib & MF DOOM.{" "}
         </div>
       </div>
     </div>
