@@ -36,7 +36,7 @@ export const Text = () => {
             transform: "translate3d(0px, 0px, 0px)",
           }}
         >
-          the all-time best{" "}
+          the all-time greatest{" "}
         </div>
       </div>
       <div
@@ -55,7 +55,7 @@ export const Text = () => {
             transform: "translate3d(0px, 0px, 0px)",
           }}
         >
-          albums, by geniuses{" "}
+          albums, made by{" "}
         </div>
       </div>
       <div

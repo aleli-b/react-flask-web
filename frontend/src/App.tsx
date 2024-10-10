@@ -25,7 +25,7 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<ContactList contacts={contacts} />} /> */}
         <Route path="/" element={<Home />} />
-        <Route path="/sr" element={<ContactForm />} />
+        <Route path="/add-contact" element={<ContactForm />} />
       </Routes>
     </BrowserRouter>
   );
