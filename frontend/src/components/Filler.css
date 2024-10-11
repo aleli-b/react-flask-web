@@ -12,11 +12,12 @@ h2 {
 .filler-wrapper {
   scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .filler-section {
-  --background: var(--dusk);
-  background-color: var(--background);
+  background-color: var(--dusk);
   height: 100vh;
   display: flex;
   justify-content: center;

@@ -14,11 +14,11 @@ export const Home = () => {
           <Title />
         </Box>
       </Box>
-      <Box className="about" id="about">
-        <About />
-      </Box>
       <Box className="filler" id="filler">
         <Filler />
+      </Box>
+      <Box className="about" id="about">
+        <About />
       </Box>
     </Box>
   );

@@ -9,8 +9,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
-  font-family: 'Aeonik Regular', system-ui, Avenir, Helvetica, Arial, sans-serif;
+html {
+  font-family: "Aeonik Regular", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   color-scheme: light dark;
@@ -181,7 +181,8 @@ textarea {
  */
 
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -191,7 +192,8 @@ input { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 

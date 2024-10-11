@@ -15,8 +15,8 @@ body {
   --background: var(--orange);
   --accent: var(--white);
 
+  background-color: var(--dusk);
   margin: 0;
   padding: 0;
-  background-color: var(--background);
   color: var(--accent);
 }

@@ -3,7 +3,6 @@ import { useRef, useEffect } from "react";
 import {
   motion,
   useScroll,
-  useSpring,
   useTransform,
   MotionValue,
 } from "framer-motion";
@@ -29,20 +28,14 @@ function Image({ id }: { id: number }) {
 }
 
 export default function Filler() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
-
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll(".filler-section");
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          (section as HTMLElement).style.scrollSnapAlign = "center";
+        console.log(window.innerHeight)
+        if (rect.top < window.innerHeight - 200 && rect.bottom >= 0) {
+          (section as HTMLElement).style.scrollSnapAlign = "start";
         } else {
           (section as HTMLElement).style.scrollSnapAlign = "none";
         }
@@ -54,11 +47,10 @@ export default function Filler() {
   }, []);
 
   return (
-    <>
+    <div className="filler-wrapper">
       {[1, 2, 3, 4, 5].map((image) => (
         <Image id={image} key={image} />
       ))}
-      <motion.div className="progress" style={{ scaleX }} />
-    </>
+    </div>
   );
 }
