@@ -9,6 +9,11 @@ h2 {
   position: absolute;
 }
 
+.filler-wrapper {
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+}
+
 .filler-section {
   --background: var(--dusk);
   background-color: var(--background);
@@ -17,7 +22,7 @@ h2 {
   justify-content: center;
   align-items: center;
   position: relative;
-  /* scroll-snap-align: center; */
+  scroll-snap-align: center;
   perspective: 500px;
 }
 

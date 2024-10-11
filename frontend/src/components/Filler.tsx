@@ -1,5 +1,5 @@
 import "./Filler.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import {
   motion,
   useScroll,
@@ -19,7 +19,7 @@ function Image({ id }: { id: number }) {
   const y = useParallax(scrollYProgress, 300);
 
   return (
-    <Box className="filler-section">
+    <Box className="filler-section" id={`filler-section-${id}`}>
       <div ref={ref}>
         <img src={`/${id}.jpg`} alt="A London skyscraper" />
       </div>
@@ -36,14 +36,29 @@ export default function Filler() {
     restDelta: 0.001,
   });
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll(".filler-section");
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+          (section as HTMLElement).style.scrollSnapAlign = "center";
+        } else {
+          (section as HTMLElement).style.scrollSnapAlign = "none";
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      <Box>
-        {[1, 2, 3, 4, 5].map((image) => (
-          <Image id={image} />
-        ))}
-        <motion.div className="progress" style={{ scaleX }} />
-      </Box>
+      {[1, 2, 3, 4, 5].map((image) => (
+        <Image id={image} key={image} />
+      ))}
+      <motion.div className="progress" style={{ scaleX }} />
     </>
   );
 }

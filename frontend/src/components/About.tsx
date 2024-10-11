@@ -75,7 +75,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 
 export default function About() {
   return (
-    <section>
+    <section className="about-section">
       <ParallaxText baseVelocity={-5}>React And Flask And</ParallaxText>
       <ParallaxText baseVelocity={5}>Demo Test Webpage</ParallaxText>
     </section>
