@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { ContactForm } from "./components/ContactForm";
 import { Home } from "./pages/Home";
 import Navbar from "./layout/Navbar";
+import { ContactList } from "./components/ContactList";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -26,6 +27,7 @@ function App() {
         {/* <Route path="/" element={<ContactList contacts={contacts} />} /> */}
         <Route path="/" element={<Home />} />
         <Route path="/add-contact" element={<ContactForm />} />
+        <Route path="/contact-list" element={<ContactList contacts={contacts} />} />
       </Routes>
     </BrowserRouter>
   );

@@ -11,6 +11,9 @@ export default function Navbar() {
         <li>
           <Link to="/add-contact">Add Contact</Link>
         </li>
+        <li>
+          <Link to="/contact-list">Contact List</Link>
+        </li>
       </ul>
     </nav>
   );
