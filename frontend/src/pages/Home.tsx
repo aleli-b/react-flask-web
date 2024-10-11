@@ -2,6 +2,8 @@ import { Box } from "@mui/material";
 import { Title } from "../components/Title";
 import { Text } from "../components/Text";
 import "./Home.css";
+import About from "../components/About";
+import Filler from "../components/Filler";
 
 export const Home = () => {
   return (
@@ -13,7 +15,10 @@ export const Home = () => {
         </Box>
       </Box>
       <Box className="about" id="about">
-        <p>About</p>
+        <About />
+      </Box>
+      <Box className="filler" id="filler">
+        <Filler />
       </Box>
     </Box>
   );

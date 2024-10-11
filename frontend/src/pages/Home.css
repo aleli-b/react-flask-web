@@ -29,7 +29,7 @@
 
 .title-wrapper {
   position: absolute;
-  color: #ffb200;
+  color: #fd7702;
   left: 0;
   bottom: 0;
 }
@@ -42,7 +42,7 @@
 .myweb {
   font-weight: 100;
   line-height: 100%;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: 89px;
 }
 

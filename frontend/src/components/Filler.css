@@ -1,0 +1,50 @@
+h2 {
+  margin: 0;
+  color: var(--accent);
+  left: calc(50% + 130px);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  position: absolute;
+}
+
+.filler-section {
+  --background: var(--dusk);
+  background-color: var(--background);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* scroll-snap-align: center; */
+  perspective: 500px;
+}
+
+.filler-section > div {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  max-height: 90vh;
+  margin: 20px;
+  background: var(--white);
+  overflow: hidden;
+  scroll-snap-type: y mandatory;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.progress {
+  position: sticky;
+  height: 5px;
+  background: var(--accent);
+  bottom: 100px;
+}

@@ -16,7 +16,7 @@ export const Title = () => {
               fontWeight: 700,
             }}
           >
-            M
+            m
           </div>
           <div
             style={{
@@ -29,8 +29,9 @@ export const Title = () => {
               fontWeight: 700,
             }}
           >
-            Y
+            y
           </div>
+
           <div
             style={{
               position: "relative",
@@ -55,7 +56,7 @@ export const Title = () => {
               fontWeight: 700,
             }}
           >
-            E
+            e
           </div>
           <div
             style={{
@@ -68,7 +69,7 @@ export const Title = () => {
               fontWeight: 700,
             }}
           >
-            B
+            b
           </div>
         </div>
       </div>
