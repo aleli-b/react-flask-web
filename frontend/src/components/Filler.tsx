@@ -33,7 +33,6 @@ export default function Filler() {
       const sections = document.querySelectorAll(".filler-section");
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        console.log(window.innerHeight)
         if (rect.top < window.innerHeight - 200 && rect.bottom >= 0) {
           (section as HTMLElement).style.scrollSnapAlign = "start";
         } else {
