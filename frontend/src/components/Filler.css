@@ -1,4 +1,4 @@
-h2 {
+.filler-section h2 {
   margin: 0;
   color: var(--accent);
   left: calc(50% + 130px);

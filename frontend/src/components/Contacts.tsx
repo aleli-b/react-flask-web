@@ -9,7 +9,7 @@ interface Contact {
   email: string;
 }
 
-export const ContactList = ({ contacts }: { contacts: Array<Contact> }) => {
+export const Contacts = ({ contacts }: { contacts: Array<Contact> }) => {
   const [open, setOpen] = useState(false);
   const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
 
@@ -53,7 +53,6 @@ export const ContactList = ({ contacts }: { contacts: Array<Contact> }) => {
 
   return (
     <div>
-      <h2>Contacts</h2>
       <table>
         <thead>
           <tr>
