@@ -10,4 +10,5 @@ MarkupSafe==3.0.1
 packaging==24.1
 SQLAlchemy==2.0.35
 typing_extensions==4.12.2
+waitress==3.0.0
 Werkzeug==3.0.4
