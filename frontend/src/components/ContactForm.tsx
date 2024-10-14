@@ -2,6 +2,7 @@ import { Box, Button } from "@mui/material";
 import { useState } from "react";
 
 export const ContactForm = () => {
+  const backUrl = import.meta.env.VITE_BACK_URL;
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -19,7 +20,7 @@ export const ContactForm = () => {
         email,
       }),
     };
-    const url = "http://127.0.0.1:5000/contacts";
+    const url = `${backUrl}/contacts`
     const response = await fetch(url, options);
     const data = await response.json();
     console.log(data);
