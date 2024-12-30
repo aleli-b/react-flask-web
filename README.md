@@ -23,8 +23,6 @@
 3. Set up the backend:
     ```sh
     cd backend
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     pip install -r requirements.txt
     ```
 4. Set up the frontend:
@@ -37,7 +35,7 @@
 1. Start the backend server:
     ```sh
     cd backend
-    flask run
+    python main.py
     ```
 2. Start the frontend development server:
     ```sh
