@@ -14,7 +14,7 @@
 ## Installation
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/yourproject.git
+    git clone https://github.com/aleli-b/react-flask-web.git
     ```
 2. Navigate to the project directory:
     ```sh
