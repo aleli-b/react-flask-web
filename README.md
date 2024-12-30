@@ -7,8 +7,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [File Descriptions](#file-descriptions)
-- [Contributing](#contributing)
-- [License](#license)
 - [Contact Information](#contact-information)
 
 ## Installation
