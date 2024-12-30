@@ -33,3 +33,20 @@
     npm install
     ```
 
+## Usage
+1. Start the backend server:
+    ```sh
+    cd backend
+    flask run
+    ```
+2. Start the frontend development server:
+    ```sh
+    cd frontend
+    npm run dev
+    ```
+
+## License
+This project is licensed under the MIT License.
+
+## Contact Information
+For further questions, please contact [yourname](mailto:youremail@example.com).
